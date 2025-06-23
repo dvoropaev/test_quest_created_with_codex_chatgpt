@@ -1,8 +1,10 @@
 import EventEmitter from './EventEmitter.js';
+import StateManager from './StateManager.js';
 
 export default class Game extends EventEmitter {
   constructor() {
     super();
+    this.state = new StateManager();
     this.scene = null;
     this.running = false;
     this._lastTime = 0;
