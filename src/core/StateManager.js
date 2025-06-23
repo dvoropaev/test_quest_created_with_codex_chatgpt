@@ -4,8 +4,17 @@ export default class StateManager {
       location: null,
       quests: {},
       relations: {},
-      inventory: {}
+      inventory: {},
+      era: 'present',
+      visitedPast: false,
+      visitedFuture: false
     };
+  }
+
+  setEra(era) {
+    this.state.era = era;
+    if (era === 'past') this.state.visitedPast = true;
+    if (era === 'future') this.state.visitedFuture = true;
   }
 
   load(json) {
