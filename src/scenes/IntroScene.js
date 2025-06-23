@@ -1,6 +1,7 @@
 import Scene from '../core/Scene.js';
 import PortalScene from './PortalScene.js';
 import ShopScene from './ShopScene.js';
+import VillageScene from './VillageScene.js';
 
 export default class IntroScene extends Scene {
   start(game) {
@@ -16,12 +17,16 @@ export default class IntroScene extends Scene {
       <p>${info}</p>
       <button id="portal">\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043F\u043E\u0440\u0442\u0430\u043B</button>
       <button id="shop">\u041A \u0442\u043E\u0440\u0433\u043E\u0432\u0446\u0443</button>
+      <button id="village">\u0412 \u0434\u0435\u0440\u0435\u0432\u043D\u044E</button>
     `;
     root.querySelector('#portal').addEventListener('click', () => {
       this.game.changeScene(new PortalScene());
     });
     root.querySelector('#shop').addEventListener('click', () => {
       this.game.changeScene(new ShopScene());
+    });
+    root.querySelector('#village').addEventListener('click', () => {
+      this.game.changeScene(new VillageScene());
     });
   }
 }
