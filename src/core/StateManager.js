@@ -18,6 +18,10 @@ export default class StateManager {
     if (era === 'future') this.state.visitedFuture = true;
   }
 
+  setLocation(location) {
+    this.state.location = location;
+  }
+
   load(json) {
     if (json) {
       this.state = JSON.parse(json);
