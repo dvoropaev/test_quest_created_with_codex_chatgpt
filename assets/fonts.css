@@ -1,0 +1,5 @@
+@font-face {
+  font-family: "QuestFont";
+  src: local("Courier New"), monospace;
+}
+body { font-family: "QuestFont", monospace; }
